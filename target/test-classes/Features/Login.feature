@@ -20,7 +20,7 @@ Feature: Login Functionality
 
     Examples:
       | username  | password  |
-      | jhonatan.pereira@dtidigital.com.br | aCiKgcro  |
+      | jhonatan.pereira@dtidigital.com.br | Test1234!  |
 
   @ExpectedSuccessfulLogoutFlow
   Scenario Outline: Logout
@@ -31,7 +31,7 @@ Feature: Login Functionality
 
     Examples:
       | username  | password  |
-      | jhonatan.pereira@dtidigital.com.br | aCiKgcro  |
+      | jhonatan.pereira@dtidigital.com.br | Test1234!  |
 
   @ExpectedUnsuccessfulLoginFlow
   Scenario Outline: Login with invalid credentials
@@ -51,6 +51,6 @@ Feature: Login Functionality
     Given user is at the Login Page
     And user clicks on FORGOT YOUR PASSWORD button
     Then user navigate to lost password page
-    And user insert valid credential: "jhonatan.pereira@dtidigital.com.br"
+    And user insert valid credential: "test@gmail.com"
     And user clicks on RETRIEVE NEW PASSWORD
     Then the system displays a recover password message

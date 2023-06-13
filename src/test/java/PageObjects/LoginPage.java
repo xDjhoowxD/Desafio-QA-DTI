@@ -99,8 +99,7 @@ public class LoginPage {
 
     public void checkResetPasswordMessage(){
         wait.until(ExpectedConditions.visibilityOf(alertMessage));
-        String expected = "There is 1 error\n" +
-                "You can regenerate your password only every 360 minute(s)";
+        String expected = "A confirmation email has been sent to your address: test@gmail.com";
         Assert.assertEquals(expected, alertMessage.getText());
     }
 
